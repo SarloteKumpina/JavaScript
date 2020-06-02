@@ -20,6 +20,7 @@ function main() {
         box.style.backgroundColor = "aquamarine";
     }
     
+    
 }
 
 main();
