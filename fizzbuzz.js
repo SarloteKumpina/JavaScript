@@ -13,8 +13,14 @@ function main() {
     addNewElement(myApp, "p", "mySpceialPar", [], "MY PARAGRAPH whoo");
     addNewElement(myApp, "p", "", ["round-corners", "green-bg"], "MY PARAGRAPH haa");
 
-    for (let i = 0; i < 100; i++) {
-        addNewElement(myApp, "div", "mySpceialPar", ["round-corners", "green-bg"], "ei ei");
+    for (let i = 1; i < 101; i++) {
+        let myClassList = ["box"];
+        if (i%2 === 0){
+            myClassList.push("round-corners", "green-bg")
+        } else {
+            myClassList.push("round-corners", "orange-bg")
+        }
+        addNewElement(myApp, "div", "my-box-id"+i, myClassList, +i);
     }
 }
 
