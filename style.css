@@ -1,0 +1,13 @@
+/* .box {
+    background-color: blueviolet;
+} */
+
+
+.round-corners {
+    border-radius: 5px;
+}
+
+.green-bg {
+    background-color: rgb(100, 177, 23);
+}
+
