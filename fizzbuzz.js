@@ -22,6 +22,18 @@ function main() {
         }
         addNewElement(myApp, "div", "my-box-id"+i, myClassList, +i);
     }
+
+    addEventHandlers ();
+}
+
+function onMyClick () {
+    console.log("Something was clicked");
+}
+
+function addEventHandlers() {
+    console.log("Adding Event Handlers");
+    const myEl = document.getElementById("my-box-id6");
+     myEl.onclick = onMyClick
 }
 
 function styleEl(myElement, height, width, bgColor, text = "") {

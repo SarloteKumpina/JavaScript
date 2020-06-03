@@ -1,17 +1,32 @@
-/* .box {
-    background-color: blueviolet;
+.box {
+    height: 40px;
+    width: 60px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 600;
+}
+
+
+/* .round-corners {
+    border-radius: 5px;
 } */
 
-
-.round-corners {
-    border-radius: 5px;
-}
 
 .green-bg {
     background-color: rgb(100, 177, 23);
 }
 
 .orange-bg {
-    background-color: rgb(204, 124, 20);
+    background-color: rgb(204, 124, 20);   
 }
 
+.yellow-bg {
+    background-color: rgb(204, 207, 30);
+}
+
+.blue-bg {
+    background-color: rgb(29, 82, 161);
+}
