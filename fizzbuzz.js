@@ -84,8 +84,15 @@ function buttonHandlersAddSingle () {
 function onButtonClickAddMany () {
     console.log("Adding Elements Many");
     const innerCont = document.querySelector(".inner-cont");
-    for (let i=0; i<10; i++){
-        addElement(innerCont, "div", "b-id-" + i, ["boxy", "yellow-bg"], "KASTES" + i);
+    for (let i=0; i<10; i++){  
+        const id = "box-id-" + i;
+        const classList = ["boxy"];
+        if (i % 2 === 0) {
+            classList.push("orange-bg");
+        }else {
+            classList.push("green-bg");
+        }
+        addElement(innerCont, "div", id, classList, "KASTES" + i);
     }
 }
 

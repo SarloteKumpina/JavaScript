@@ -30,3 +30,20 @@
 .blue-bg {
     background-color: rgb(29, 82, 161);
 }
+
+.inner-cont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxy {
+    height: 7vh;
+    width: 140px;
+    margin: 7px;
+    border-radius: 14px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    /* font-weight: 400; */
+
+}
