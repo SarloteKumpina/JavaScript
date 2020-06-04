@@ -24,6 +24,10 @@ function main() {
     }
 
     addEventHandlers ();
+    addBoxes ();
+    buttonHandlersAddSingle ();
+    // buttonHandlersAddMany ();
+    buttonHandlersClear ();
 }
 
 function onMyClick () {
@@ -35,6 +39,46 @@ function addEventHandlers() {
     const myEl = document.getElementById("my-box-id6");
      myEl.onclick = onMyClick
 }
+
+function addBoxes () {
+    const myElements = document.getElementsByClassName("box");
+    for (const element of myElements) {
+        element.onmousedown = () => console.log("On mouse down");
+    }
+}
+
+function onButtonClickAddSingle () {
+    console.log("Adding Elements Single");
+}
+
+function buttonHandlersAddSingle () {
+    console.log("Adding Button Handlers Single");
+    const myBtn1 = document.getElementById("btn-add");
+    myBtn1.onclick = onButtonClickAddSingle;
+}
+
+// function onButtonClickAddMany () {
+
+//     console.log("Adding Elements Many");
+// }
+
+// function buttonHandlersAddMany () {
+//     console.log("Adding Button Handlers Many");
+//     const myBtnMany = document.getElementById("btn-add");
+//     myBtnMany.onclick = onButtonClickAddMany;
+// }
+
+function onButtonClickClear () {
+    console.log("Clearing Elements");
+}
+
+function buttonHandlersClear () {
+    console.log("Clearing Button Handlers");
+    const myBtn2 = document.getElementById("btn-clear");
+    myBtn2.onclick = onButtonClickClear;
+}
+
+
 
 function styleEl(myElement, height, width, bgColor, text = "") {
     myElement.style.height = height;
