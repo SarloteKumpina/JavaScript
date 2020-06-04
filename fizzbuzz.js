@@ -49,12 +49,19 @@ function addBoxes () {
 
 function onButtonClickAddSingle () {
     console.log("Adding Elements Single");
+    const innerCont = document.querySelector(".inner-cont")
+    const newEl = document.createElement("div");
+    newEl.innerText = "Saturs";
+    innerCont.appendChild(newEl);
 }
 
 function buttonHandlersAddSingle () {
     console.log("Adding Button Handlers Single");
     const myBtn1 = document.getElementById("btn-add");
     myBtn1.onclick = onButtonClickAddSingle;
+    // const addBox = document.getElementById("btn-add");
+    // addBox.addEventListener("click",() => console.log("add button press"))
+
 }
 
 // function onButtonClickAddMany () {
