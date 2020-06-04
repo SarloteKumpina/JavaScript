@@ -47,3 +47,7 @@
     /* font-weight: 400; */
 
 }
+
+.boxy:hover {
+    box-shadow: 3px 3px 2px 0px grey;
+}
