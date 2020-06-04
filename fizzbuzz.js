@@ -26,7 +26,7 @@ function main() {
     addEventHandlers ();
     addBoxes ();
     buttonHandlersAddSingle ();
-    // buttonHandlersAddMany ();
+    buttonHandlersAddMany ();
     buttonHandlersClear ();
 }
 
@@ -47,36 +47,63 @@ function addBoxes () {
     }
 }
 
-function onButtonClickAddSingle () {
+function onAddElement (event) {
+    // , event.currnetTarget.id
+
     console.log("Adding Elements Single");
-    const innerCont = document.querySelector(".inner-cont")
-    const newEl = document.createElement("div");
-    newEl.innerText = "Saturs";
-    innerCont.appendChild(newEl);
+    const innerCont = document.querySelector(".inner-cont");
+    // const newEl = document.createElement("div");
+    // // newEl.innerText = "Saturs";
+    // // innerCont.appendChild(newEl);
+    // // if (id !== null) {
+    // //     newEl.id = id;
+    // // }
+    // newEl.classList.add(".inner-cont-box");
+    // innerCont.appendChild(newEl);
+    addElement(innerCont, "div", null, ["boxy", "blue-bg"], "Kastīte");
+}
+
+function addElement(parent, tag, id, classList, content) {
+    const newEl = document.createElement(tag);
+    if (id !== null) newEl.id = id;
+    newEl.classList.add(...classList);
+    newEl.innerText = content;
+    parent.appendChild(newEl);
+
 }
 
 function buttonHandlersAddSingle () {
     console.log("Adding Button Handlers Single");
-    const myBtn1 = document.getElementById("btn-add");
-    myBtn1.onclick = onButtonClickAddSingle;
+    const myBtn1 = document.getElementById("btn-add-one");
+    myBtn1.onclick = onAddElement;
     // const addBox = document.getElementById("btn-add");
     // addBox.addEventListener("click",() => console.log("add button press"))
 
 }
 
-// function onButtonClickAddMany () {
+function onButtonClickAddMany () {
+    console.log("Adding Elements Many");
+    const innerCont = document.querySelector(".inner-cont");
+    for (let i=0; i<10; i++){
+        addElement(innerCont, "div", "b-id-" + i, ["boxy", "yellow-bg"], "KASTES" + i);
+    }
+}
 
-//     console.log("Adding Elements Many");
-// }
+function buttonHandlersAddMany () {
+    console.log("Adding Button Handlers Many");
+    const myBtnMany = document.getElementById("btn-add-many");
+    myBtnMany.onclick = onButtonClickAddMany;
+}
 
-// function buttonHandlersAddMany () {
-//     console.log("Adding Button Handlers Many");
-//     const myBtnMany = document.getElementById("btn-add");
-//     myBtnMany.onclick = onButtonClickAddMany;
-// }
+
+
 
 function onButtonClickClear () {
     console.log("Clearing Elements");
+    const innerCont = document.querySelector(".inner-cont");
+    while (innerCont.firstChild) {
+        innerCont.removeChild(innerCont.firstChild);
+    }
 }
 
 function buttonHandlersClear () {
