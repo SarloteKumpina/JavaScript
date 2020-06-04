@@ -1,6 +1,7 @@
 // console.log("Running FIZZ BUZZ");
 //globals
 const maxCountEl = document.getElementById("max-count");
+let maxCount = 20;
 
 function main() {
     console.log("Running main");
@@ -85,7 +86,8 @@ function buttonHandlersAddSingle () {
 function onButtonClickAddMany () {
     console.log("Adding Elements Many");
     const innerCont = document.querySelector(".inner-cont");
-    for (let i=0; i < maxCountEl.value; i++){  
+    for (let i=0; i < maxCount;
+        ; i++){  
         const id = "box-id-" + i;
         const classList = ["boxy"];
         if (i % 2 === 0) {
