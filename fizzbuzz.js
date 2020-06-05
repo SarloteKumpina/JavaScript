@@ -52,7 +52,7 @@ function addBoxes () {
 function onAddElement (event) {
     // , event.currnetTarget.id
 
-    console.log("Adding Elements Single");
+    console.log("Adding Elements Single", event.currnetTarget.id);
     const innerCont = document.querySelector(".inner-cont");
     // const newEl = document.createElement("div");
     // // newEl.innerText = "Saturs";
@@ -86,8 +86,7 @@ function buttonHandlersAddSingle () {
 function onButtonClickAddMany () {
     console.log("Adding Elements Many");
     const innerCont = document.querySelector(".inner-cont");
-    for (let i=0; i < maxCount;
-        ; i++){  
+    for (let i=0; i < maxCount; i++){  
         const id = "box-id-" + i;
         const classList = ["boxy"];
         if (i % 2 === 0) {
